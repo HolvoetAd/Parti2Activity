@@ -12,22 +12,7 @@ class Avatar extends React.Component {
     this._avatarClicked = this._avatarClicked.bind(this)
   }
 
-  _avatarClicked() {
-    ImagePicker.showImagePicker({}, (response) => {
-      if (response.didCancel) {
-        console.log('L\'utilisateur a annulé')
-      }
-      else if (response.error) {
-        console.log('Erreur : ', response.error)
-      }
-      else {
-        console.log('Photo : ', response.uri )
-        let requireSource = { uri: response.uri }
-        // On crée une action avec l'image prise et on l'envoie au store Redux
-        const action = { type: "SET_AVATAR", value: requireSource }
-        this.props.dispatch(action)
-      }
-    })
+ 
   }
 
   render() {
