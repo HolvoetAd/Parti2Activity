@@ -13,12 +13,7 @@ class Favorites extends React.Component {
       <View style={styles.main_container}>
         <View style={styles.avatar_container}>
           <Avatar/>
-        </View>
-        <FilmList
-          films={this.props.favoritesFilm}
-          navigation={this.props.navigation}
-          favoriteList={true}
-        />
+       
       </View>
     )
   }
